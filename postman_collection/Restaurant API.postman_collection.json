@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "586d0329-b512-4b71-80f3-52c03d0ad958",
+		"name": "Restaurant API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "Get menus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/api/menu",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"api",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a menu",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Loaded chicken pizza\",\r\n    \"ShortDescription\": \"potato, mushroom, onion\",\r\n    \"Price\": 5.99,\r\n    \"Category\": [\r\n        \"Mains\"\r\n    ],\r\n    \"MealTime\": [\r\n        \"Lunch\", \"Dinner\"\r\n    ],\r\n    \"IsActive\": true,\r\n    \"PreparationTime\": \"00:02:15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44337/api/menu",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"api",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/api/menu/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"api",
+								"menu",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61bc48f6cd1d80fba25a7083"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put a menu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Hand tossed salad\",\r\n    \"ShortDescription\": \"strawberries, dried cranberries, raisins, pineapples\",\r\n    \"Price\": 4.99,\r\n    \"Category\": [\r\n        \"Salads\"\r\n    ],\r\n    \"MealTime\": [\r\n        \"Breakfast\",\r\n        \"Entree\"\r\n    ],\r\n    \"IsActive\": true,\r\n    \"PreparationTime\": \"00:01:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44337/api/menu/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"api",
+								"menu",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61bb5b154d495cadf9149c0e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a menu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/api/menu/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"api",
+								"menu",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61be23d07f0e7230a0eafca5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
